@@ -40,6 +40,7 @@ build/
 .next/
 .nuxt/
 .serverless/
+# Keep Oracle client downloads in ../artifacts/node-service-oracle/ outside this repository.
 downloads/
 download/
 donwload/

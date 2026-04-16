@@ -64,3 +64,6 @@ Thumbs.db
 *.bak
 *.pid
 *.pid.lock
+
+# Large local artifacts should live in ../artifacts/node-api-gpli/ outside this repository.
+typebot.io-main.zip

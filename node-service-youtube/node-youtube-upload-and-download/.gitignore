@@ -23,6 +23,7 @@ coverage/
 dist/
 build/
 .cache/
+# Keep local installers and binary tools in ../artifacts/node-service-youtube/ outside this repository.
 downloads/
 download/
 donwload/
