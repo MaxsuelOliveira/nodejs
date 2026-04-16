@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --azul-1: #806eff;
+    --cinza-1: #f1f3f5;
+    --branco: #ffffff;
+    --bordar-cinza: #ced4da;
+    --texto: #212529;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: var(--texto);
+}
+
+.convertcase-root {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.convertcase {
+    width: 100%;
+    max-width: 1080px;
+    background: var(--branco);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+}
+
+.convertcase-header h1 {
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.convertcase-header .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem 0.6rem;
+    border-radius: 999px;
+    background: var(--azul-1);
+    color: #fff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.convertcase-header p {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.convertcase-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+    grid-template-rows: auto auto;
+    grid-gap: 1.5rem;
+    margin-top: 1.8rem;
+}
+
+.convertcase-input,
+.convertcase-output {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.convertcase-input label,
+.convertcase-output label {
+    font-weight: 500;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--bordar-cinza);
+    padding: 0.75rem 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: 2px solid var(--azul-1);
+    outline-offset: 1px;
+}
+
+.convertcase-actions h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.convertcase-actions .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.convertcase-actions button {
+    border-radius: 999px;
+    border: 1px solid var(--bordar-cinza);
+    background: #f8f9ff;
+    color: var(--texto);
+    padding: 0.35rem 0.85rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
+}
+
+.convertcase-actions button:hover {
+    background: var(--azul-1);
+    border-color: var(--azul-1);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.convertcase-actions button:active {
+    transform: translateY(0);
+}
+
+.output-actions {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#copy-output {
+    border-radius: 999px;
+    border: none;
+    background: var(--azul-1);
+    color: #fff;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+#copy-output i {
+    font-size: 0.85rem;
+}
+
+.copy-status {
+    font-size: 0.8rem;
+    color: #28a745;
+}
+
+@media (max-width: 900px) {
+    .convertcase {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .convertcase-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .convertcase-root {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .convertcase-header h1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .output-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #copy-output {
+        width: 100%;
+        justify-content: center;
+    }
+}

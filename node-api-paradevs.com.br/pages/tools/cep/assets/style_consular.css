@@ -1,0 +1,118 @@
+@import url(../../../style/index.css);
+@import url(mobile.css);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background: var(--cinza-1);
+    width: 100%;
+    height: 10rem;
+    padding: 2rem;
+}
+
+form input {
+    padding: 10px !important;
+    border: 0px;
+    font-size: 33px !important;
+    border-radius: 5px;
+    font-weight: 500 !important;
+}
+
+form i {
+    font-size: 1.15rem;
+}
+
+form .input-group {
+    background-color: var(--azul-1) !important;
+    background-color: transparent !important;
+    border-radius: 20px;
+    border: 3px solid var(--azul-1);
+    border-bottom-width: 5px;
+}
+
+form .form-control {
+    /* background-color: var(--azul-1); */
+    background-color: transparent !important;
+
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    text-align: center;
+    font-size: 1.45rem !important;
+}
+
+hr {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #eeef;
+    border-width: 2px;
+}
+
+section {
+    position: relative;
+    top: 10rem;
+    padding: 2rem;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.row>div {
+    margin-bottom: 0.5rem;
+}
+
+.container>.row {
+    background-color: var(--cinza-1);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+#result .form-label {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#result .form-label {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+#result .form-control {
+    border: none;
+    font-weight: 700;
+    cursor: copy;
+}
+
+.loading-elements {
+    background-color: gray;
+    color: gray;
+}
+
+#about {
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+}
+
+
+.container {
+    max-width: 950px;
+}

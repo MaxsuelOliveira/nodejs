@@ -1,0 +1,46 @@
+@import url(../../../assets/css/default.css);
+
+h1 {
+    margin: 0px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+#numeros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+#funcoes {
+    display: flex;
+    flex-direction: column;
+}
+
+#numeros button , #funcoes button{
+    width: 60px;
+    order: 1;
+}
+
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    justify-content: center;
+    width: 250px;
+    gap: 0.1rem;
+}
+
+.visor {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+
+.visor input{
+    width: 100%;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador - Paragrafos </title>
+</head>
+
+<body>
+
+    <span>Gerador de paragrafos.</span>
+
+    <form action="/" method="post">
+
+        <input type="text" placeholder="paragrafos" id="paragrafos_qnt">
+
+        <div>
+            <label for="range">paragrafos médio</label>
+            <input type="range" min="1" max="3" id="type">
+        </div>
+
+        <button type="submit">gerar</button>
+
+    </form>
+
+    <div id="resultado">
+    </div>
+
+    <script src="../../../vendor/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        let paragrafos_qnt = document.querySelector("#paragrafos_qnt");
+        let type_T = "";
+        let text = "";
+
+
+        document.querySelector("#type").addEventListener("change" , (event) => {
+            let input_type = document.querySelector("#type").value; 
+
+            if (input_type === 1) {
+                type_T = "textsm"
+            } if  (input_type === 2){
+                type_T = "textbg"
+            } if (input_type === 3) {
+                type_T  = "textmd"
+            }
+
+            console.log(type_T)
+            
+
+        })
+
+        document.querySelector("form").addEventListener("submit", (event)=> {
+            event.preventDefault();
+            
+            let textsm = "Lorem ipsum nunc vivamus nulla curabitur fusce feugiat cursus purus iaculis tincidunt eget, maecenas euismod vivamus neque sed fusce auctor metus aliquam et."
+            let textbg  = "nibh interdum arcu ante euismod pulvinar ante placerat, praesent mi hendrerit venenatis nec primis id vehicula, nunc eleifend integer viverra tortor tellus. fermentum ullamcorper varius lorem sed tempus tellus aliquam, quisque ante enim interdum odio risus, fusce tempus nec tincidunt ut tortor."
+            let textmd = "maecenas pretium sagittis luctus augue nisl velit interdum aenean nam laoreet, vulputate lectus cras duis velit vivamus blandit aenean egestas lacinia dolor, a quam condimentum tincidunt molestie ornare conubia pellentesque fusce. "
+            
+            for (let index = 0; index < paragrafos_qnt.value ; index++) {
+
+                if (type_T === "textsm") {
+                    text = textsm;
+                } else if (type_T === "textbg") {
+                    text = textbg;
+                } else {
+                    text = textmd;
+                }
+
+                $("#resultado").append(`<p>${text}</p>`)
+                
+            }
+
+        })
+        
+      
+    
+    
+    </script>
+
+
+    <!-- <p class="lorem sm"></p> -->
+    <!-- <p class="lo sm"></p>
+    <p class="lorem 123"></p> -->
+   
+    <!-- <div class="lorem numParagraphs - 1 numwords/paragraph - 1"></div> -->
+
+    <script src="../../../vendor/lorem.min.js"></script>
+
+</body>
+
+</html>

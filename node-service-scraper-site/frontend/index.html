@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScraperToolKit | Dump de sites com ZIP persistente</title>
+    <meta
+      name="description"
+      content="Ferramenta minimalista para baixar sites, acompanhar o scraping em tempo real e recuperar ZIPs mesmo apos recarregar a pagina."
+    />
+    <meta name="theme-color" content="#0a0f1a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="ScraperToolKit | Dump de sites" />
+    <meta
+      property="og:description"
+      content="Cole links, acompanhe o progresso em um modal simples e baixe os sites dumpados."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro">
+        <p class="eyebrow">Scraping persistente</p>
+        <h1>Baixe sites e acompanhe o processo sem perder o historico.</h1>
+        <p class="intro-copy">
+          Cole uma URL por linha. Cada link vira um dump separado com seu
+          proprio acompanhamento e seu proprio ZIP.
+        </p>
+      </section>
+
+      <section class="panel composer-panel">
+        <label for="urls">Links para baixar</label>
+        <textarea
+          id="urls"
+          spellcheck="false"
+          placeholder="https://exemplo.com&#10;https://docs.exemplo.com"
+        ></textarea>
+
+        <div id="formNotice" class="notice" hidden></div>
+
+        <div class="toolbar">
+          <button id="startBtn" class="primary-btn" type="button">
+            Iniciar scraping
+          </button>
+          <button id="refreshJobsBtn" class="secondary-btn" type="button">
+            Atualizar lista
+          </button>
+          <button id="clearUrlsBtn" class="ghost-btn" type="button">
+            Limpar campo
+          </button>
+        </div>
+      </section>
+
+      <section class="projects-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Sites dumpados</p>
+            <h2>Downloads disponiveis e projetos em andamento</h2>
+          </div>
+        </div>
+
+        <div id="projectEmptyState" class="panel empty-state">
+          Nenhum site dumpado ainda.
+        </div>
+
+        <div id="jobGrid" class="job-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <div id="jobModal" class="modal" hidden aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal="true"></div>
+
+      <section
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <header class="modal-header">
+          <div>
+            <p class="eyebrow">Acompanhamento</p>
+            <h2 id="modalTitle">Projeto</h2>
+            <p id="modalSubtitle" class="modal-copy">
+              Logs e progresso do scraping.
+            </p>
+          </div>
+
+          <div class="modal-actions">
+            <a
+              id="modalDownloadLink"
+              class="primary-btn"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+              >Baixar ZIP</a
+            >
+            <button id="copyLogsBtn" class="secondary-btn" type="button">
+              Copiar logs
+            </button>
+            <button id="closeModalBtn" class="ghost-btn" type="button">
+              Voltar
+            </button>
+          </div>
+        </header>
+
+        <div class="modal-status">
+          <div class="status-row">
+            <span id="statusPill" class="status-pill">Aguardando</span>
+            <strong id="progressLabel">0%</strong>
+          </div>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="modal-meta">
+          <div class="meta-item">
+            <span>Job ID</span>
+            <strong id="jobId">-</strong>
+          </div>
+          <div class="meta-item">
+            <span>Status</span>
+            <strong id="jobStatus">-</strong>
+          </div>
+          <div class="meta-item">
+            <span>Sites</span>
+            <strong id="siteCount">0</strong>
+          </div>
+          <div class="meta-item">
+            <span>Criado em</span>
+            <strong id="createdAtLabel">-</strong>
+          </div>
+        </div>
+
+        <section id="evidencePanel" class="panel evidence-panel" hidden>
+          <div class="evidence-head">
+            <div>
+              <p class="eyebrow">Evidencias</p>
+              <h3 id="evidenceTitle">Sem bloqueio detectado</h3>
+            </div>
+            <span id="evidenceLabels" class="status-pill">Sem sinais</span>
+          </div>
+          <p id="evidenceRecommendation" class="modal-copy">
+            Nenhuma evidencia capturada para este job.
+          </p>
+          <div class="modal-actions evidence-actions">
+            <a
+              id="evidenceScreenshotLink"
+              class="secondary-btn"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+              >Abrir screenshot</a
+            >
+            <a
+              id="evidenceHtmlLink"
+              class="secondary-btn"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+              >Abrir HTML bruto</a
+            >
+          </div>
+        </section>
+
+        <div id="modalEmptyState" class="empty-log-state">
+          Nenhum log disponivel para este projeto.
+        </div>
+        <div id="logBox" class="log-box"></div>
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

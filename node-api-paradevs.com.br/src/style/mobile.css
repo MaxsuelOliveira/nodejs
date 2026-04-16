@@ -1,0 +1,47 @@
+@media (max-width : 739px) {
+    a {
+        max-width: 100%;
+        min-width: 100%;
+        justify-content: flex-start !important;
+    }
+
+    .tools {
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(1, 1fr) !important;
+    }
+
+    section {
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    div p {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+    }
+
+    .buscar {
+        margin-bottom: 30px;
+    }
+
+    .buscar form {
+        flex-direction: column;
+    }
+
+    .buscar button {
+        width: 100%;
+    }
+
+    .pix-donate {
+        align-items: stretch;
+    }
+
+    .pix-qrcode {
+        margin: 0 auto;
+    }
+}

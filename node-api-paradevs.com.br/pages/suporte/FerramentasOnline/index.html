@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <form action="/" method="post">
+        <input type="text" placeholder="000.000.0000-00">
+        <button type="submit">consultar</button>
+    </form>
+
+
+    <script>
+
+
+        document.querySelector("form").addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            let cnpj = event.target[0].value;
+            cnpj = "12345678901234"
+
+            consultar("").then((response) => {
+
+                console.log(response);
+
+            }).catch((err) => {
+
+            });
+
+
+        })
+
+
+        async function consultar(cnpj) {
+
+            // Fazendo a requisição para a API
+            fetch(`https://www.receitaws.com.br/v1/cnpj/${cnpj}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Aqui você pode manipular os dados retornados pela API
+                    console.log(data);
+                    // Exemplo de acesso aos dados
+                    const nomeEmpresa = data.nome;
+                    const endereco = data.logradouro;
+                    // ...
+                })
+                .catch(error => {
+                    console.error("Erro na consulta de CNPJ:", error);
+                });
+
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

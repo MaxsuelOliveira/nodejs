@@ -1,0 +1,135 @@
+@import url(../../../../../assets/css/default.css);
+@import url(mobile.css);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+section {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    background-color: var(--cinza-1);
+    width: 100%;
+    height: 10rem;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h1 {
+    position: relative;
+}
+
+.main>.container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container strong {
+    font-weight: 700;
+    font-family: system-ui, sans-serif;
+    margin-bottom: -0.5rem;
+    font-size: 1.2rem;
+}
+
+section  > .container{
+    margin-top: -2rem;
+}
+
+#senha {
+    max-width: 1100px !important;
+}
+
+.form {
+   
+  
+}
+
+input {
+    text-align: center;
+}
+
+#digitos {
+    max-width: 100px !important;
+}
+
+.result {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    margin-top: -2rem;
+}
+
+
+#generator {
+    font-size: 0.9rem;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#init > .form-control{
+    border-color: var(--azul-1);
+    border-bottom-color: var(--azul-1) !important;
+    border-bottom-width: 5px !important;
+  
+    font-weight: bold;
+    font-size: 3rem;
+
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    color: var(--azul-1);
+}
+
+div > .form-control {
+    font-size: 1.15rem;
+    font-weight: bold;
+    border: 2px solid  var(--azul-1);
+    width: 100px;
+    border-radius: 20px;
+}
+
+button {
+    font-size: 1.15rem !important;
+    font-weight: 700;
+}
+
+input:read-only{
+    background-color: #fff !important;
+}
+
+form  > div{
+    display: flex;
+    gap: 0.5rem;
+
+}

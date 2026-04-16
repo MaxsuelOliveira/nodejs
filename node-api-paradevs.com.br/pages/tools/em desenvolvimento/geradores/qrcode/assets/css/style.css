@@ -1,0 +1,119 @@
+@import url(../../../../../assets/css/default.css);
+@import url(mobile.css);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    font-weight: 700;
+}
+
+section {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    background-color: var(--cinza-1);
+    width: 100%;
+    height: 10rem;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h1 {
+    position: relative;
+}
+
+.main>.container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+#qrcode {
+    width: 210px;
+    height: 210px;
+}
+
+.result {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    margin-top: -2rem;
+}
+
+.result>div {
+    display: flex;
+}
+
+.shared ul {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    margin: 0px !important;
+    /* padding: 0px; */
+
+    flex-direction: column;
+}
+
+.shared ul button {
+    font-size: 0.9rem;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.form-control {
+    border-width: 3px;
+    border-color: var(--azul-1);
+    border-radius: 20px !important;
+    border-bottom-color: var(--azul-1) !important;
+    border-bottom-width: 7px !important;
+    min-height: 5rem !important;
+    max-height: 350px !important;
+    font-weight: bold;
+}
+
+button {
+    font-weight: 700;
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.modal-body>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin: 0px;
+    font-weight: 700;
+    font-weight: bold;
+}
+input[type="color"] {
+    border: none;
+}

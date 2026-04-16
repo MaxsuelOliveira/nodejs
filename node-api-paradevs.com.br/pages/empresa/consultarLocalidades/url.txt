@@ -1,0 +1,3 @@
+https://servicodados.ibge.gov.br/api/docs/localidades
+
+https://www.gov.br/conecta/catalogo/apis/registro-referencia-municipios#:~:text=A%20API%20do%20Registro%20de,sendo%20mais%20um%20instrumento%20para

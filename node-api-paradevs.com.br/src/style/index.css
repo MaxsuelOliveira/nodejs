@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Cores */
+:root {
+    --azul-1: #806eff;
+    --cinza-1: #f1f3f5;
+    --branco: #ffffff;
+    --bordar-cinza: #ced4da;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700 !important;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.main {
+    margin-top: 6rem;
+}
+
+.alerta {
+    color: var(--azul-1);
+}
+
+.border-b {
+    border-bottom: 5px solid;
+}
+
+/* Modal (caso use bootstrap/modal em algum lugar) */
+.modal-header {
+    border: 0;
+}
+
+.modal-content {
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Layout padrão das sections */
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 2rem; */
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Grid de ferramentas */
+.tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+div p {
+    font-size: 1.45rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid transparent;
+    border-bottom: 5px solid transparent;
+    justify-content: center;
+    text-decoration: none !important;
+    max-width: 200px;
+    text-align: inherit;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    height: min-content;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    border: 2px solid var(--azul-1);
+    border-bottom: 5px solid var(--azul-1);
+    border-radius: 10px;
+}
+
+a span {
+    color: var(--azul-1);
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+a span::first-letter {
+    text-transform: capitalize;
+}
+
+a i {
+    color: var(--azul-1);
+    font-size: 1.15rem;
+    border-radius: 50%;
+}
+
+.tools a div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Avaliações (se usar estrelas em algum lugar) */
+.stars {
+    position: absolute;
+    height: 6rem;
+    margin-left: 0.5rem;
+}
+
+.starts i {
+    font-size: 0.75rem !important;
+}
+
+.badge {
+    background-color: var(--azul-1);
+}
+
+.categoria {
+    font-size: 11px;
+}
+
+/* Mensagem quando não há ferramentas */
+.tools-empty {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+/* Busca */
+.buscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+}
+
+.buscar form {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscar input {
+    border: 2px solid var(--azul-1);
+    border-radius: 20px;
+    padding: 10px;
+    flex: 1;
+    width: fit-content;
+    height: 50px;
+}
+
+.buscar button {
+    align-items: center;
+    border: 0;
+    border-radius: 20px;
+    background-color: var(--azul-1);
+    color: #fff;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Bloco de doações PIX */
+.pix-donate {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--bordar-cinza);
+    background-color: var(--cinza-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.pix-label {
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.pix-qrcode {
+    width: 180px;
+    height: 180px;
+    max-width: 100%;
+}
+
+.pix-code {
+    font-family: monospace;
+    font-size: 0.85rem;
+    word-break: break-all;
+    background-color: var(--branco);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px dashed var(--bordar-cinza);
+}
+
+/* Dialog PIX (modal roxo) */
+.pix-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 9999;
+}
+
+.pix-dialog {
+    background: var(--azul-1);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+}
+
+.pix-dialog h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+}
+
+.pix-dialog p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.pix-dialog-code {
+    display: block;
+    font-family: monospace;
+    font-size: 0.9rem;
+    word-break: break-all;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.pix-dialog-close {
+    border: 0;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: var(--azul-1);
+    padding: 0.4rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    float: right;
+}
+
+.pix-dialog-close:hover {
+    background-color: var(--cinza-1);
+}

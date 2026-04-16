@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conversor de Caixa de Texto - Paradevs</title>
+    <meta
+      name="description"
+      content="Converta textos para maiúsculas, minúsculas, Sentence case, Title Case e outros formatos online."
+    />
+
+    <link
+      rel="stylesheet"
+      href="../../../src/vendor/fontawesome-free-6.2.0-web/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="convertcase-root">
+      <section class="convertcase">
+        <header class="convertcase-header">
+          <h1>
+            <span>Conversor de Caixa de Texto</span>
+            <span class="badge">Paradevs</span>
+          </h1>
+          <p>
+            Cole seu texto, escolha o tipo de conversão e copie o resultado.
+          </p>
+        </header>
+
+        <div class="convertcase-grid">
+          <div class="convertcase-input">
+            <label for="input-text">Texto de entrada</label>
+            <textarea
+              id="input-text"
+              placeholder="Cole ou digite seu texto aqui..."
+              rows="8"
+            ></textarea>
+          </div>
+
+          <div class="convertcase-actions">
+            <h2>Tipo de conversão</h2>
+            <div class="buttons">
+              <button data-mode="sentence" type="button">Sentence case</button>
+              <button data-mode="lower" type="button">lower case</button>
+              <button data-mode="upper" type="button">UPPER CASE</button>
+              <button data-mode="capitalized" type="button">
+                Capitalized Case
+              </button>
+              <button data-mode="title" type="button">Title Case</button>
+              <button data-mode="alternating" type="button">
+                aLtErNaTiNg cAsE
+              </button>
+              <button data-mode="slug" type="button">slug-case</button>
+            </div>
+          </div>
+
+          <div class="convertcase-output">
+            <label for="output-text">Resultado</label>
+            <textarea id="output-text" rows="8" readonly></textarea>
+            <div class="output-actions">
+              <button id="copy-output" type="button">
+                <i class="fa-regular fa-copy"></i>
+                Copiar resultado
+              </button>
+              <span class="copy-status" aria-live="polite"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

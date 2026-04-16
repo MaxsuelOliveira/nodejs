@@ -1,0 +1,139 @@
+
+.main {
+    min-height: 100vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+  
+  
+  
+  #formulario .title {
+    font-size: 44px;
+    color: var(--laranja);
+    font-weight: bold;
+  }
+  
+  #formulario .form-control {
+    width: auto !important;
+    border-radius: 20px;
+    padding: 20px !important;
+    min-height: 60px;
+  }
+  
+  #formulario .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-radius {
+    border-radius: 0px 0px 50px 50px !important;
+  }
+  
+  
+  .menu-display {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  
+    max-width: 400px;
+    background-color: var(--color1);
+    min-height: 90vh;
+    overflow: auto;
+  
+    border-radius: 0px 0px 0px 100px;
+  
+    display: none;
+  }
+  
+  @media (max-width: 780px) {
+    .menu-display ul {
+      overflow: hidden;
+      overflow-y: scroll;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  
+    #formulario .form-control {
+      width: 100% !important;
+    }
+  }
+  
+  #formulario .form-control::placeholder {
+    color: var(--color1);
+  }
+  
+  
+  .logo {
+    font-size: 25px;
+    font-family: 'Clear Sans Bold';
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--color1);
+  }
+  
+  
+  
+  .menu-active {
+    display: block !important;
+  }
+  
+  
+  .menu-display a {
+    font-size: 22px !important;
+    padding: 20px 0px;
+    font-family: 'Poppins', sans-serif !important;
+    color: #f3f0f0 !important;
+  }
+  
+  .menu-display .notify:active {
+    color: #fff;
+  }
+  
+  .menu-display {
+    padding: 2rem;
+  }
+  
+  .menu-display .buttons {
+    width: -webkit-fill-available;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+  
+  }
+  
+  
+  .section .container {
+    padding: 0px 20px;
+  }
+  
+  
+  .navigation .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: break-spaces;
+  }
+  
+  .navbar>.container, .navbar>.container-fluid {
+    flex-wrap: nowrap;
+  }

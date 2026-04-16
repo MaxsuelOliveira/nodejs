@@ -1,0 +1,39 @@
+{
+	"name": "precodahora-api",
+	"version": "1.0.2",
+	"description": "Preço da Hora Private API written in JS",
+	"main": "src/app.js",
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Pedneri1/precodahora-api"
+	},
+	"keywords": [
+		"preco da hora",
+		"private api",
+		"api privada",
+		"bahia",
+		"node"
+	],
+	"author": "Pedro Neri <pedneri1@gmail.com>",
+	"bugs": {
+		"url": "https://github.com/Pedneri1/precodahora-api/issues"
+	},
+	"homepage": "https://github.com/Pedneri1/precodahora-api",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.21.1",
+		"express": "^5.1.0",
+		"node-html-parser": "^1.2.16",
+		"precodahora-api": "^1.0.3",
+		"querystring": "^0.2.0",
+		"tough-cookie": "^4.0.0",
+		"useragent-from-seed": "^1.0.1",
+		"xo": "^0.33.0"
+	},
+	"devDependencies": {
+		"ava": "^3.8.1"
+	}
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "nfe": [
+            {
+                "title": "Inicia <b>NF-e</b>",
+                "command": {
+                    "location": "nfe",
+                    "solution": "start",
+                    "file": "start.-nfe.bat"
+                }
+            },
+            {
+                "title": "Reinicia <b>NF-e</b>",
+                "command": {
+                    "location": "nfe",
+                    "solution": "restart",
+                    "file": "restart-nfe.bat"
+                }
+            },
+            {
+                "title": "Para <b>NF-e</b>",
+                "command": {
+                    "location": "nfe",
+                    "solution": "stop",
+                    "file": "stop-nfe.bat"
+                }
+            }
+        ]
+    }
+]

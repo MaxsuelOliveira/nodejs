@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Básica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section>
+
+        <div class="container">
+
+            <div class="visor">
+                <div>
+                    <input type="text" readonly value="" id="one">
+                </div>
+                <input type="text" readonly value="" id="two">
+            </div>
+
+
+            <div class="main">
+                <div id="funcoes">
+                    <button type="button" value="excluir">excluir</button>
+                    <button type="button" value="/">/</button>
+                    <button type="button" value="*">X</button>
+                    <button type="button" value="-">-</button>
+                    <button type="button" value="+">+</button>
+                    <button type="button" value="=">=</button>
+                </div>
+    
+                <ul id="numeros">
+    
+                    <div>
+                        <button type="button" value="%">%</button>
+                        <button type="button">C</button>
+                        <button type="button">x²</button>
+                    </div>
+
+                    <div>
+                        <button type="button" value="7" style="order : 7;">7</button>
+                        <button type="button" value="8" style="order : 8;">8</button>
+                        <button type="button" value="9" style="order : 9;">9</button>
+                    </div>
+    
+                    <div>
+                        <button type="button" value="4" style="order : 4;">4</button>
+                        <button type="button" value="5" style="order : 5;">5</button>
+                        <button type="button" value="6" style="order : 6;">6</button>
+                    </div>
+    
+                    <div>
+                        <button type="button" value="1" style="order : 1;">1</button>
+                        <button type="button" value="2" style="order : 2;">2</button>
+                        <button type="button" value="3" style="order : 3;">3</button>
+                    </div>
+    
+                    <div>
+                        <button type="button" value="0" style="order : 0;">0</button>
+                    </div>
+    
+    
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../../../vendor/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

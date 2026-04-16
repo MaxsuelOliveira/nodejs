@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor - Moedas</title>
+    <link rel="stylesheet" href="../../../vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="home">
+        <div class="container">
+            <h1><span class="alerta">USD</span> para <span class="alerta">BRL</span></h1>
+
+            <form action="#" method="post">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <select name="coins" id="coins" class="form-control">
+                            <option value="usd" selected>USD</option>
+                            <option value="volvo" disabled>EUR</option>
+                            <option value="mercedes" disabled>ENG</option>
+                        </select>
+                        <div> <span>dolar americano</span></div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">$</span>
+                            </div>
+                            <input type="number" class="form-control" id="valor" value="1" min="1">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="resultado" readonly>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+
+    <article>
+        <div class="container">
+            <h2>Conversor</h2>
+            <p></p>
+        </div>
+    </article>
+
+
+    <script src="../../../vendor/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="../dolar/dolar.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

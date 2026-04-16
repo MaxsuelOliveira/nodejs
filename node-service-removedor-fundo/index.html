@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BG Remover Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">BR</div>
+        <div>
+          <p class="eyebrow">Produto</p>
+          <h1>BG Remover Pro</h1>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Entrada</h2>
+        <label id="dropZone" class="dropzone" for="fileInput">
+          <input id="fileInput" type="file" accept="image/*" hidden />
+          <div class="drop-icon">⤴</div>
+          <strong>Arraste a imagem aqui</strong>
+          <span>ou clique para selecionar</span>
+          <small>PNG, JPG, WEBP</small>
+        </label>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Remoção</h2>
+          <span class="pill" id="statusPill">Aguardando imagem</span>
+        </div>
+
+        <div class="field-group inline-toggle">
+          <button class="mode-btn active" data-bg-mode="auto">Auto</button>
+          <button class="mode-btn" data-bg-mode="green">Verde</button>
+          <button class="mode-btn" data-bg-mode="blue">Azul</button>
+        </div>
+
+        <div class="field-group">
+          <div class="label-row">
+            <label for="strengthRange">Força</label>
+            <span id="strengthValue">0.64</span>
+          </div>
+          <input id="strengthRange" type="range" min="0.05" max="1" step="0.01" value="0.64" />
+        </div>
+
+        <div class="field-group">
+          <div class="label-row">
+            <label for="softnessRange">Suavização</label>
+            <span id="softnessValue">0.22</span>
+          </div>
+          <input id="softnessRange" type="range" min="0.02" max="0.6" step="0.01" value="0.22" />
+        </div>
+
+        <div class="field-group">
+          <div class="label-row">
+            <label for="despillRange">Despill</label>
+            <span id="despillValue">0.58</span>
+          </div>
+          <input id="despillRange" type="range" min="0" max="1" step="0.01" value="0.58" />
+        </div>
+
+        <div class="field-group">
+          <div class="label-row">
+            <label for="noiseRange">Limpeza de ruído</label>
+            <span id="noiseValue">1</span>
+          </div>
+          <input id="noiseRange" type="range" min="0" max="3" step="1" value="1" />
+        </div>
+
+        <div class="field-group checkbox-row">
+          <label><input id="autoProcess" type="checkbox" checked /> Processar automaticamente</label>
+        </div>
+
+        <div class="info-grid">
+          <div>
+            <span>Arquivo</span>
+            <strong id="fileName">Nenhum</strong>
+          </div>
+          <div>
+            <span>Resolução</span>
+            <strong id="resolution">-</strong>
+          </div>
+          <div>
+            <span>Fundo detectado</span>
+            <strong id="detectedBg">-</strong>
+          </div>
+          <div>
+            <span>HSV alvo</span>
+            <strong id="targetHueText">-</strong>
+          </div>
+        </div>
+
+        <div class="action-stack">
+          <button id="processBtn" class="btn btn-primary" disabled>Processar imagem</button>
+          <button id="downloadBtn" class="btn btn-secondary" disabled>Baixar PNG</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="workspace-header">
+        <div>
+          <p class="eyebrow">Comparação</p>
+          <h2>Antes e depois</h2>
+        </div>
+        <div class="legend">
+          <span><i class="dot dot-original"></i> Original</span>
+          <span><i class="dot dot-result"></i> Sem fundo</span>
+        </div>
+      </header>
+
+      <section class="comparison-card">
+        <div id="comparisonWrapper" class="comparison-wrapper empty">
+          <div class="comparison-bg checkerboard"></div>
+          <canvas id="resultCanvas" class="layer-canvas"></canvas>
+          <div id="beforeClip" class="before-clip">
+            <canvas id="originalCanvas" class="layer-canvas"></canvas>
+          </div>
+          <div id="comparisonHandle" class="comparison-handle" style="left: 50%;">
+            <div class="handle-line"></div>
+            <div class="handle-knob">⇆</div>
+          </div>
+          <div class="empty-state" id="emptyState">
+            <div class="empty-illustration">🖼️</div>
+            <h3>Envie uma imagem para começar</h3>
+            <p>O sistema detecta fundo verde ou azul, remove com HSV e limpa ruído nas bordas.</p>
+          </div>
+        </div>
+
+        <div class="slider-row">
+          <label for="compareRange">Visualização</label>
+          <input id="compareRange" type="range" min="0" max="100" value="50" />
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

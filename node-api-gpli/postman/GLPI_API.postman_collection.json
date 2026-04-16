@@ -1,0 +1,191 @@
+{
+  "info": {
+    "name": "GLPI API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Cole\u00e7\u00e3o para uso da API REST do GLPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Iniciar Sess\u00e3o",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "App-Token",
+            "value": "{{App-Token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "user_token {{Authorization}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_Url}}/apirest.php/initSession",
+          "host": [
+            "{{base_Url}}"
+          ],
+          "path": [
+            "apirest.php",
+            "initSession"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar Chamado",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "App-Token",
+            "value": "{{App-Token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "user_token {{Authorization}}"
+          },
+          {
+            "key": "Session-Token",
+            "value": "{{TokenSessao}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": {\n    \"name\": \"T\\u00edtulo do Chamado\",\n    \"content\": \"Descri\\u00e7\\u00e3o detalhada do chamado\",\n    \"itilcategories_id\": 1,\n    \"type\": 1,\n    \"urgency\": 3,\n    \"priority\": 3,\n    \"impact\": 2,\n    \"users_id_requester\": 2,\n    \"users_id_recipient\": 5,\n    \"entities_id\": 1\n  }\n}"
+        },
+        "url": {
+          "raw": "{{base_Url}}/apirest.php/Ticket",
+          "host": [
+            "{{base_Url}}"
+          ],
+          "path": [
+            "apirest.php",
+            "Ticket"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Chamado",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "App-Token",
+            "value": "{{App-Token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "user_token {{Authorization}}"
+          },
+          {
+            "key": "Session-Token",
+            "value": "{{TokenSessao}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": {\n    \"id\": 123,\n    \"name\": \"T\\u00edtulo Atualizado do Chamado\",\n    \"content\": \"Descri\\u00e7\\u00e3o atualizada do chamado\"\n  }\n}"
+        },
+        "url": {
+          "raw": "{{base_Url}}/apirest.php/Ticket/123",
+          "host": [
+            "{{base_Url}}"
+          ],
+          "path": [
+            "apirest.php",
+            "Ticket",
+            "123"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Fechar Chamado",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "App-Token",
+            "value": "{{App-Token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "user_token {{Authorization}}"
+          },
+          {
+            "key": "Session-Token",
+            "value": "{{TokenSessao}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": {\n    \"id\": 123,\n    \"status\": 6,\n    \"solution\": \"<p>Chamado finalizado</p>\",\n    \"solutiontypes_id\": 3\n  }\n}"
+        },
+        "url": {
+          "raw": "{{base_Url}}/apirest.php/Ticket/123",
+          "host": [
+            "{{base_Url}}"
+          ],
+          "path": [
+            "apirest.php",
+            "Ticket",
+            "123"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Consultar Chamado",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "App-Token",
+            "value": "{{App-Token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "user_token {{Authorization}}"
+          },
+          {
+            "key": "Session-Token",
+            "value": "{{TokenSessao}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_Url}}/apirest.php/Ticket/123",
+          "host": [
+            "{{base_Url}}"
+          ],
+          "path": [
+            "apirest.php",
+            "Ticket",
+            "123"
+          ]
+        }
+      }
+    }
+  ]
+}

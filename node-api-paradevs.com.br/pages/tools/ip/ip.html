@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu título - paradevs.com.br</title>
+
+    <link rel="stylesheet" href="../../../vendor/fontawesome-free-6.2.0-web/css/all.css">
+    <link href="../../../vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <form action="#" method="post">
+            <div class="container">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Recipient's username"
+                        aria-describedby="button-addon2" id="cep" maxlength="9" placeholder="00000-000" required>
+                    <button class="btn btn-color" type="reset"><i class="fa-solid fa-minus"></i></button>
+                    <button class="btn btn-color" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </form>
+
+        <section id="result">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <label for="resultado" class="form-label">Resultado</label>
+                        <input type="text" class="form-control" id="resultado" placeholder=""
+                            value="Rua bairro cidade estado complemento" readonly>
+                    </div>
+
+                    <hr>
+
+                    <div class="col-sm-6">
+                        <label for="rua" class="form-label">Rua</label>
+                        <input type="text" class="form-control" id="rua" placeholder="" value="Rua" readonly="">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="bairro" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" placeholder="" value="Vila" readonly="">
+                    </div>
+
+                    <div class="col-sm-12">
+                        <label for="complemento" class="form-label">Complemento</label>
+                        <input type="text" class="form-control" id="complemento" placeholder="" value="" readonly="">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="cidade" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" placeholder="" value="Nova Iorque"
+                            readonly="">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="estado" class="form-label">Estado</label>
+                        <input type="text" class="form-control" id="estado" placeholder="" value="EUA" readonly="">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about">
+
+            <div class="container">
+
+                <h1>Consultar cep</h1>
+                <strong>
+                    Busque informações de qualquer CEP é rápida , fácil e permite você pode copiar os campos
+                    separados.
+                </strong>
+
+                <p>
+                    outras informações relavantes.
+                </p>
+
+                <nav>
+                    <a href="#" title="Ajuda num caféziz ?"> ajude o cafézin com um pix !</a>
+                    <a href="#" title="Conheça mais">Outras ferramentas</a>
+                </nav>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- <footer>
+        <article class="ads">
+            anucios
+        </article>
+    </footer> -->
+
+    <script src="../../../vendor/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="assets/cep.js"></script>
+
+</body>
+
+</html>

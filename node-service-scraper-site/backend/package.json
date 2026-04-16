@@ -1,0 +1,19 @@
+{
+  "name": "scraper-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fs-extra": "^11.3.0",
+    "website-scraper": "^6.0.0",
+    "website-scraper-puppeteer": "^2.0.0"
+  }
+}

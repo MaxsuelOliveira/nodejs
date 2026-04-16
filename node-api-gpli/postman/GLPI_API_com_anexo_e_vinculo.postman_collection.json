@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "GLPI_API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Anexar Arquivo ao Chamado",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "App-Token",
+            "value": "{{App-Token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "user_token {{Authorization}}"
+          },
+          {
+            "key": "Session-Token",
+            "value": "{{TokenSessao}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "uploadManifest",
+              "value": "{\"input\": {\"name\": \"anexo.jpg\", \"itemtype\": \"Ticket\", \"items_id\": 123}}",
+              "type": "text"
+            },
+            {
+              "key": "filename",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_Url}}/apirest.php/Document",
+          "host": [
+            "{{base_Url}}"
+          ],
+          "path": [
+            "apirest.php",
+            "Document"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Vincular Documento ao Chamado (manual)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "App-Token",
+            "value": "{{App-Token}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "user_token {{Authorization}}"
+          },
+          {
+            "key": "Session-Token",
+            "value": "{{TokenSessao}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": {\n    \"documents_id\": 456,\n    \"itemtype\": \"Ticket\",\n    \"items_id\": 123\n  }\n}"
+        },
+        "url": {
+          "raw": "{{base_Url}}/apirest.php/Ticket/123/Document_Item",
+          "host": [
+            "{{base_Url}}"
+          ],
+          "path": [
+            "apirest.php",
+            "Ticket",
+            "123",
+            "Document_Item"
+          ]
+        }
+      }
+    }
+  ]
+}

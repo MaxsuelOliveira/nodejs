@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Crie seu qrcode com a nossa ajuda.">
+    <meta name="author" content="Maxsuel David">
+    <meta name="generator" content="Maxsuel D 0.1">
+    <title>Gerador de número</title>
+
+    <link rel="canonical" href="https://paradevs.com.br/">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="" sizes="180x180">
+    <link rel="icon" href="" sizes="32x32" type="image/png">
+    <link rel="icon" href="" sizes="16x16" type="image/png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="" color="#712cf9">
+    <link rel="icon" href="">
+    <meta name="theme-color" content="#712cf9">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../../vendor/fontawesome-free-6.2.0-web/css/all.css">
+    <link href="../../../vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+<body>
+
+    <!-- Conteudo -->
+    <section>
+
+        <div class="main">
+            <div class="container">
+                <h1>Gerador de <span class="alerta">número</span></h1>
+                <strong>Do <span for="min">0</span> ao <span for="max">100</span></strong>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <form method="post" action="/" id="init">
+
+                <input type="text" class="form-control" name="numero" id="numero" placeholder="0" readonly>
+
+                <div>
+                    <div>
+                        <input type="text" class="form-control" name="numero" id="min" placeholder="0">
+                    </div>
+
+                    <div>
+                        <input type="text" class="form-control" name="numero" id="max" placeholder="0" value="100">
+                    </div>
+                </div>
+
+                <button id="generator" type="submit">gerar número</button>
+
+            </form>
+
+        </div>
+
+
+    </section>
+
+    <div class="modal">
+        <form action="/" method="post">
+            <div>
+                <span for="vmax">Máximo</span>
+                <input type="number" name="" id="vmax" value="0">
+            </div>
+
+
+
+        </form>
+    </div>
+
+    <!-- informações -->
+    <section>
+        <div class="container">
+            informações sobre o gerador de números para o anuncio.
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../../../vendor/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="../../../vendor/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

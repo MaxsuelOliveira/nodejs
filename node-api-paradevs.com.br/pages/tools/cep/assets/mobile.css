@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+    section article:nth-child(2) {
+        padding-top: 2rem;
+    }
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "active": true,
+        "title": "Buscador de CEP - paradevs.com.br",
+        "icone": "<i class='fa-solid fa-location-dot'></i>",
+        "nome": "Consultar CEP",
+        "descricao": "Consulte o CEP que você deseja.",
+        "url": "tools/cep/consultar.html",
+        "categoria": "buscador"
+    },
+    {
+        "active": true,
+        "title": "Conversor de Caixa de Texto - paradevs.com.br",
+        "icone": "<i class='fa-solid fa-text-height'></i>",
+        "nome": "Conversor de Caixa de Texto",
+        "descricao": "Converta textos para maiúsculas, minúsculas, Sentence case, Title Case e mais.",
+        "url": "tools/text/convertcase/index.html",
+        "categoria": "texto"
+    }
+]

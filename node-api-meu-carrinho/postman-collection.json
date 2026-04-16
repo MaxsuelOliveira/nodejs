@@ -1,0 +1,123 @@
+{
+    "info": {
+        "_postman_id": "cesta-crud-exemplo-2026",
+        "name": "Meu Carrinho API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": "Coleção de exemplos para testar a API Meu Carrinho"
+    },
+    "item": [
+        {
+            "name": "Adicionar item à cesta",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"produto\": \"Arroz\",\n  \"quantidade\": 1,\n  \"valor_unitario\": 5.99\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3020/cesta/test-uuid/adicionar",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3020",
+                    "path": [
+                        "cesta",
+                        "test-uuid",
+                        "adicionar"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Listar itens da cesta",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3020/cesta/test-uuid",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3020",
+                    "path": [
+                        "cesta",
+                        "test-uuid"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Atualizar item da cesta",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"produto\": \"Feijão Preto\",\n  \"quantidade\": 2,\n  \"valor_unitario\": 8.49\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3020/cesta/test-uuid/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3020",
+                    "path": [
+                        "cesta",
+                        "test-uuid",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Remover item da cesta",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3020/cesta/test-uuid/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3020",
+                    "path": [
+                        "cesta",
+                        "test-uuid",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Esvaziar cesta",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3020/cesta/test-uuid",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3020",
+                    "path": [
+                        "cesta",
+                        "test-uuid"
+                    ]
+                }
+            }
+        }
+    ]
+}

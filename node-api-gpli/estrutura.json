@@ -1,0 +1,33 @@
+{
+  "controllers": [
+    "audioController.js",
+    "imageController.js",
+    "clienteController.js",
+    "chamadoController.js"
+  ],
+  "services": [
+    "openaiService.js",
+    "whisperService.js",
+    "ocrService.js",
+    "glpiService.js",
+    "cnpjService.js"
+  ],
+  "database": [
+    "db.js"
+  ],
+  "models": [
+    "cliente.js"
+  ],
+  "routes": [
+    "index.js"
+  ],
+  "utils": [
+    "logger.js",
+    "formatter.js"
+  ],
+  "root_files": [
+    ".env",
+    "app.js",
+    "package.json"
+  ]
+}

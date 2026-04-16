@@ -1,0 +1,111 @@
+@import url(../../../../../assets/css/default.css);
+@import url(mobile.css);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    font-weight: 700;
+}
+
+section {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    background-color: var(--cinza-1);
+    width: 100%;
+    height: 10rem;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h1 {
+    position: relative;
+}
+
+.main>.container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+section  > .container{
+    margin-top: -2rem;
+}
+
+#senha {
+    max-width: 1100px !important;
+}
+
+.form {
+    display: flex;
+    gap: 1rem;
+  
+}
+
+input {
+    text-align: center;
+}
+
+#digitos {
+    max-width: 100px !important;
+}
+
+.result {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    margin-top: -2rem;
+}
+
+
+#generator {
+    font-size: 0.9rem;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-control {
+    border-width: 3px;
+    border-color: var(--azul-1);
+    border-radius: 20px !important;
+    border-bottom-color: var(--azul-1) !important;
+    border-bottom-width: 7px !important;
+    min-height: 5rem !important;
+    max-height: 350px !important;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+button {
+    font-size: 1.15rem !important;
+    font-weight: 700;
+}
+
+input:read-only{
+    background-color: #fff !important;
+}
