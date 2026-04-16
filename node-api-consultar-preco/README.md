@@ -1,4 +1,4 @@
-### Uma API Privada para o Preço da Hora Bahia
+### Uma API Privada para o Preço da Hora Bahia - teste
 
 [![precodahora-api](https://circleci.com/gh/Pedneri1/precodahora-api.svg?style=shield)](https://circleci.com/gh/Pedneri1/precodahora-api)
 
@@ -21,41 +21,41 @@ const PrecoDaHora = require("precodahora-api");
 const client = new PrecoDaHora();
 
 client
-	.sugestao({ item: "ABACAXI" })
-	.then((res) => {
-		if (res.data.codigo == 80) {
-			console.log("Sugestões para o termo buscado:");
-			console.log(res.data.resultado);
-		} else {
-			console.log("Ocorreu um erro");
-		}
-	})
-	.catch((error) => console.error(error));
+  .sugestao({ item: "ABACAXI" })
+  .then((res) => {
+    if (res.data.codigo == 80) {
+      console.log("Sugestões para o termo buscado:");
+      console.log(res.data.resultado);
+    } else {
+      console.log("Ocorreu um erro");
+    }
+  })
+  .catch((error) => console.error(error));
 
 client
-	.produto({
-		gtin: 7891055317303, //obrigatório
-		horas: 72,
-		latitude: -12.2733, //obrigatório
-		longitude: -38.9556, //obrigatório
-		raio: 15,
-		precomax: 0,
-		precomin: 0,
-		ordenar: "preco.asc",
-		pagina: 1,
-		processo: "carregar",
-		totalRegistros: 0,
-		totalPaginas: 0,
-		pageview: "lista",
-	})
-	.then((res) => {
-		if (res.data.codigo == 80) {
-			console.log("Resultado da busca para o produto: ");
-			console.log(res.data.resultado);
-		} else {
-			console.log("Ocorreu um erro");
-		}
-	});
+  .produto({
+    gtin: 7891055317303, //obrigatório
+    horas: 72,
+    latitude: -12.2733, //obrigatório
+    longitude: -38.9556, //obrigatório
+    raio: 15,
+    precomax: 0,
+    precomin: 0,
+    ordenar: "preco.asc",
+    pagina: 1,
+    processo: "carregar",
+    totalRegistros: 0,
+    totalPaginas: 0,
+    pageview: "lista",
+  })
+  .then((res) => {
+    if (res.data.codigo == 80) {
+      console.log("Resultado da busca para o produto: ");
+      console.log(res.data.resultado);
+    } else {
+      console.log("Ocorreu um erro");
+    }
+  });
 ```
 
 Usando o `async/await` no Node >= 8
@@ -65,44 +65,43 @@ const PrecoDaHora = require("precodahora-api");
 const client = new PrecoDaHora();
 
 (async () => {
-	const res = await client.sugestao({ item: "ABACAXI" });
-	if (res.data.codigo == 80) {
-		console.log("Resultado da busca para o produto: ");
-		console.log(res.data.resultado);
-	} else {
-		console.log("Ocorreu um erro");
-	}
+  const res = await client.sugestao({ item: "ABACAXI" });
+  if (res.data.codigo == 80) {
+    console.log("Resultado da busca para o produto: ");
+    console.log(res.data.resultado);
+  } else {
+    console.log("Ocorreu um erro");
+  }
 })();
 
 (async () => {
-	const res = await client.produto({
-		gtin: 7891055317303, //obrigatório
-		horas: 72,
-		latitude: -12.2733, //obrigatório
-		longitude: -38.9556, //obrigatório
-		raio: 15,
-		precomax: 0,
-		precomin: 0,
-		ordenar: "preco.asc",
-		pagina: 1,
-		processo: "carregar",
-		totalRegistros: 0,
-		totalPaginas: 0,
-		pageview: "lista",
-	});
-	if (res.data.codigo == 80) {
-		console.log("Resultado da busca para o produto: ");
-		console.log(res.data.resultado);
-	} else {
-		console.log("Ocorreu um erro");
-	}
+  const res = await client.produto({
+    gtin: 7891055317303, //obrigatório
+    horas: 72,
+    latitude: -12.2733, //obrigatório
+    longitude: -38.9556, //obrigatório
+    raio: 15,
+    precomax: 0,
+    precomin: 0,
+    ordenar: "preco.asc",
+    pagina: 1,
+    processo: "carregar",
+    totalRegistros: 0,
+    totalPaginas: 0,
+    pageview: "lista",
+  });
+  if (res.data.codigo == 80) {
+    console.log("Resultado da busca para o produto: ");
+    console.log(res.data.resultado);
+  } else {
+    console.log("Ocorreu um erro");
+  }
 })();
 ```
 
 ## Referências da API
 
 - [PrecoDaHora](#precodahora)
-
   - [new PrecoDaHora()](#precodahora)
   - [.sugestao({ item })](#sugestaoparams)
   - [.produto({ termo, gtin, cnpj, horas, anp, codmun, latitude, longitude, raio, precomax, precomin pagina, ordenar, categorias, processo, totalCategorias, totalRegistros, totalPaginas, pageview })](#produtoparams)
@@ -131,19 +130,19 @@ const sugestoes = await client.sugestao({ item: "ÁGUA" });
 
 ```js
 const produto = await client.produto({
-	gtin: 7891055317303, //obrigatório
-	horas: 72,
-	latitude: -12.2733, //obrigatório
-	longitude: -38.9556, //obrigatório
-	raio: 15,
-	precomax: 0,
-	precomin: 0,
-	ordenar: "preco.desc",
-	pagina: 1,
-	processo: "carregar",
-	totalRegistros: 0,
-	totalPaginas: 0,
-	pageview: "lista",
+  gtin: 7891055317303, //obrigatório
+  horas: 72,
+  latitude: -12.2733, //obrigatório
+  longitude: -38.9556, //obrigatório
+  raio: 15,
+  precomax: 0,
+  precomin: 0,
+  ordenar: "preco.desc",
+  pagina: 1,
+  processo: "carregar",
+  totalRegistros: 0,
+  totalPaginas: 0,
+  pageview: "lista",
 });
 ```
 
