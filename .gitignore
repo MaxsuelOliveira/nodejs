@@ -73,3 +73,8 @@
 
 # Large local archives
 node-api-gpli/glpi/typebot.io-main.zip
+
+# Local installers and binary tools
+node-service-youtube/node-youtube-upload-and-download/OllamaSetup.exe
+node-service-youtube/node-youtube-upload-and-download/yt-dlp.exe
+node-service-youtube/node-youtube-upload-and-download/yt-dlp_win.zip
