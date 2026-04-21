@@ -17,6 +17,7 @@ const { LOG_FILE, logInfo, logWarn, logError } = require("./logger");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const FRONTEND_ROOT = path.resolve(__dirname, "..");
 const ACTIVE_JOBS = new Set();
 const SSE_CONNECTIONS = new Map();
 const JOBS_ROOT = path.resolve(__dirname, "storage", "jobs");
@@ -29,6 +30,17 @@ let REQUEST_SEQUENCE = 0;
 
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
+app.use(
+  "/assets",
+  express.static(path.join(FRONTEND_ROOT, "assets"), {
+    maxAge: "1h",
+    fallthrough: false,
+  }),
+);
+
+app.get(["/", "/index.html"], (req, res) => {
+  res.sendFile(path.join(FRONTEND_ROOT, "index.html"));
+});
 
 app.use((req, res, next) => {
   const startedAt = Date.now();

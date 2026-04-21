@@ -1,4 +1,4 @@
-# Scraper App
+# ScraperToolKit
 
 Projeto completo com:
 
@@ -16,7 +16,7 @@ Projeto completo com:
 ## Estrutura
 
 ```txt
-scraper-app/
+node-service-scraper-site/
   backend/
     package.json
     server.js
@@ -24,8 +24,10 @@ scraper-app/
     jobs.js
     zip.js
     storage/jobs/
-  frontend/
-    index.html
+  index.html
+  assets/
+    css/styles.css
+    js/app.js
   README.md
 ```
 
@@ -55,13 +57,20 @@ http://localhost:3000
 
 ## Executar frontend
 
-Abra o arquivo abaixo diretamente no navegador:
+O frontend agora e servido diretamente pelo backend.
+
+Com o backend rodando, abra:
 
 ```txt
-frontend/index.html
+http://localhost:3000
 ```
 
-Ou sirva com um servidor estático da sua preferência.
+As importacoes de CSS/JS usam:
+
+- `/assets/css/styles.css`
+- `/assets/js/app.js`
+
+E as chamadas da API usam a mesma origem do navegador.
 
 ## Fluxo da aplicação
 
