@@ -16,7 +16,7 @@ const { runScrapingJob } = require("./scraper");
 const { LOG_FILE, logInfo, logWarn, logError } = require("./logger");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const FRONTEND_ROOT = path.resolve(__dirname, "..");
 const ACTIVE_JOBS = new Set();
 const SSE_CONNECTIONS = new Map();

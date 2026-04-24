@@ -1,4 +1,4 @@
-const API_BASE = window.location.origin;
+const API_BASE = "http://localhost:3001";
 const DRAFT_STORAGE_KEY = "scraperToolkit.urlsDraft";
 const STATUS_LABELS = {
   pending: "Preparando",
