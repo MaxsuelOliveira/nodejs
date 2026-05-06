@@ -42,7 +42,7 @@ build/
 .serverless/
 # Keep Oracle client downloads in ../artifacts/node-service-oracle/ outside this repository.
 downloads/
-download/
+downloads/
 donwload/
 temp/
 temp_uploads/
@@ -65,3 +65,5 @@ Thumbs.db
 *.bak
 *.pid
 *.pid.lock
+
+*.zip
